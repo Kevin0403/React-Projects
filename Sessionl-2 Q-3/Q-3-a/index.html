@@ -1,34 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <input type="text" id="url" placeholder="Enter Url">
-        <button >Go</button>
-    </div>
-    <div>
-        <h1>Output</h1>
-        <textarea id="output" cols="30" rows="10" readonly="true">
-            Output will be displayed here
-        </textarea>
-    </div>
-
-    <script>
-        document.querySelector('button').addEventListener('click', function(){
-            var url = document.querySelector('#url').value;
-            var output = document.querySelector('#output');
-            fetch(url).then(function(response){
-                return response.text();
-            }).then(function(data){
-                output.value = data;
-            }).catch(function(error){
-                output.value = error;
-            })
-        });
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
